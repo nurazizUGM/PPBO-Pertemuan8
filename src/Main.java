@@ -4,8 +4,9 @@ import types.TipeKantor;
 
 public class Main {
     public static void main(String[] args) {
-        Karyawan aziz = new Karyawan("Aziz", 10000000, JenisKelamin.PRIA);
-        Manager nur = new Manager("Nur", 20000000, JenisKelamin.PRIA, TipeKantor.PUSAT);
+        Karyawan nur = new Karyawan("Nur", 10000000, JenisKelamin.PRIA);
+        Manager aziz = new Manager("Aziz", 20000000, JenisKelamin.PRIA, TipeKantor.PUSAT);
+        Manager azizCabang = new Manager("Aziz Cabang", 20000000, JenisKelamin.PRIA, TipeKantor.CABANG);
 
         Salesman sales1 = new Salesman("Sales1", 5000000, JenisKelamin.PRIA);
         sales1.setTarget(20);
@@ -15,21 +16,22 @@ public class Main {
         sales2.setTarget(20);
         sales2.setPenjualan(5);
 
-        System.out.println(aziz.getNIK());
         System.out.println(nur.getNIK());
+        System.out.println(aziz.getNIK());
         System.out.println(sales1.getNIK());
         System.out.println(sales2.getNIK());
 
-        System.out.println(aziz.getTHR());
         System.out.println(nur.getTHR());
+        System.out.println(aziz.getTHR());
+        System.out.println(azizCabang.getTHR());
         System.out.println(sales1.getTHR());
         System.out.println(sales2.getTHR());
 
-        aziz.tambahCuti(5);
-        System.out.println(aziz.getJumlahCuti());
-
-        nur.tambahCuti(TipeCuti.PERNIKAHAN);
+        nur.tambahCuti(5);
         System.out.println(nur.getJumlahCuti());
+
+        aziz.tambahCuti(TipeCuti.PERNIKAHAN);
+        System.out.println(aziz.getJumlahCuti());
 
         sales1.tambahCuti(TipeCuti.PERSALINAN);
         System.out.println(sales1.getJumlahCuti());
