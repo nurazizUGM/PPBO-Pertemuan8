@@ -1,4 +1,3 @@
-
 import types.JenisKelamin;
 
 public class Salesman extends Karyawan {
@@ -18,7 +17,7 @@ public class Salesman extends Karyawan {
         this.target = target;
     }
 
-    void setPenjualan(int penjualan){
+    void setPenjualan(int penjualan) {
         this.penjualan = penjualan;
     }
 }
